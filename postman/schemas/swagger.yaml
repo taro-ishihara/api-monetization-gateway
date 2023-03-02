@@ -17,7 +17,7 @@ paths:
       tags:
         - "JREUserInfoAPI"
       summary: "駅ユーザーの統計情報を取得するAPI"
-      description: "このAPIは利用回数ごとに課金されます。"
+      description: "このAPIは利用回数ごとに課金されますね。"
       operationId: "getEkiuser"
       parameters:
         - name: frontegg-client-id
