@@ -1,0 +1,80 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: api-monetization-gateway
+
+Globals:
+  Function:
+    Timeout: 5
+    MemorySize: 128
+    Runtime: python3.9
+    Architectures:
+      - x86_64
+    Environment:
+      Variables:
+        LOG_LEVEL: INFO
+        MOESIF_APPLICATION_ID: eyJhcHAiOiIxMDkxOjM3OCIsInZlciI6IjIuMCIsIm9yZyI6IjM1MTo0NTIiLCJpYXQiOjE2Nzc2Mjg4MDB9.oJ3YT4JuMHbqIw7MOxywIVjDlf59yHiNS1uz-szU7gs
+
+
+Resources:
+  monetizationAPIGateway:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      DefinitionUri: swagger.yaml
+
+  authorizerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: AuthorizerFunction
+      CodeUri: functions/authorizer
+      Handler: handler.lambda_handler
+
+  ekiuserAPIFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: EkiuserAPIFunction
+      CodeUri: functions/ekiuser_api
+      Handler: handler.lambda_handler
+
+  kaisatsuAPIFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: KaisatsuAPIFunction
+      CodeUri: functions/kaisatsu_api
+      Handler: handler.lambda_handler
+
+  suicauserAPIFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: SuicauserAPIFunction
+      CodeUri: functions/suicauser_api
+      Handler: handler.lambda_handler
+
+  zaisenAPIFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: ZaisenAPIFunction
+      CodeUri: functions/zaisen_api
+      Handler: handler.lambda_handler
+
+  lambdaInvocationRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: LambdaInvocationRole
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - "apigateway.amazonaws.com"
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaRole
+
+Outputs:
+  monetizationAPIGatewayEndpoint:
+    Description: "API Gateway endpoint URL for Monetization API Gateway"
+    Value: !GetAtt
+      - monetizationAPIGateway
+      - ApiEndpoint
