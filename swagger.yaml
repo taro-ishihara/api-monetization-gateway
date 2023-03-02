@@ -9,7 +9,7 @@ tags:
   - name: "JREUserInfoAPI"
     description: "JR東日本を利用するユーザーに関するAPI"
   - name: "JRETrainAPI"
-    description: "JR東日本の運行情報に関するAPI"
+    description: "JR東日本の運行情報に関するAPIです。"
 
 paths:
   /ekiuser:
