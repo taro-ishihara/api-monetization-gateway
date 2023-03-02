@@ -1,0 +1,715 @@
+{
+	"info": {
+		"_postman_id": "ef84328c-b216-4b3e-abd8-795481c2ebc5",
+		"name": "api-monetization-gateway",
+		"description": "This gateway acts as a front door to your API, allowing us to control access to the underlying services and resources.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "26046786-ef84328c-b216-4b3e-abd8-795481c2ebc5"
+	},
+	"item": [
+		{
+			"name": "駅ユーザーの統計情報を取得するAPI",
+			"id": "c3257e3a-0514-47d0-b33d-78ab96a93c53",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Frontegg M2M Token",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "{{apiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+						"key": "frontegg-client-id",
+						"value": "cillum esse Duis id"
+					},
+					{
+						"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+						"key": "frontegg-secret-key",
+						"value": "cillum esse Duis id"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/ekiuser",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ekiuser"
+					]
+				},
+				"description": "このAPIは利用回数ごとに課金されます。"
+			},
+			"response": [
+				{
+					"id": "ffeb8b7e-b92c-4d53-bca5-92fe46a15fae",
+					"name": "200 OK",
+					"originalRequest": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Frontegg M2M Token",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+								"key": "frontegg-client-id",
+								"value": "cillum esse Duis id"
+							},
+							{
+								"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+								"key": "frontegg-secret-key",
+								"value": "cillum esse Duis id"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/ekiuser",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ekiuser"
+							]
+						},
+						"description": "このAPIは利用回数ごとに課金されます。"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"id": "5187d3bd-e865-4c3b-82ca-a42a37b98dab",
+					"name": "404 Not Found",
+					"originalRequest": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Frontegg M2M Token",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+								"key": "frontegg-client-id",
+								"value": "cillum esse Duis id"
+							},
+							{
+								"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+								"key": "frontegg-secret-key",
+								"value": "cillum esse Duis id"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/ekiuser",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ekiuser"
+							]
+						},
+						"description": "このAPIは利用回数ごとに課金されます。"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "改札の利用者を取得するAPI",
+			"id": "9ab22950-1ac7-47d8-ada3-ef68f4423dbb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Frontegg M2M Token",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "{{apiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+						"key": "frontegg-client-id",
+						"value": "cillum esse Duis id"
+					},
+					{
+						"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+						"key": "frontegg-secret-key",
+						"value": "cillum esse Duis id"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/kaisatsu",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"kaisatsu"
+					]
+				},
+				"description": "このAPIは利用回数ごとに課金されます。"
+			},
+			"response": [
+				{
+					"id": "4f7c5b25-612b-4cc9-9bac-43075fbb9d56",
+					"name": "200 OK",
+					"originalRequest": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Frontegg M2M Token",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+								"key": "frontegg-client-id",
+								"value": "cillum esse Duis id"
+							},
+							{
+								"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+								"key": "frontegg-secret-key",
+								"value": "cillum esse Duis id"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/kaisatsu",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"kaisatsu"
+							]
+						},
+						"description": "このAPIは利用回数ごとに課金されます。"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"id": "61168500-34ac-4307-9b6e-c8bc0212637c",
+					"name": "404 Not Found",
+					"originalRequest": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Frontegg M2M Token",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+								"key": "frontegg-client-id",
+								"value": "cillum esse Duis id"
+							},
+							{
+								"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+								"key": "frontegg-secret-key",
+								"value": "cillum esse Duis id"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/kaisatsu",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"kaisatsu"
+							]
+						},
+						"description": "このAPIは利用回数ごとに課金されます。"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Suicaの利用者統計を取得するAPI",
+			"id": "9e9633cc-3f54-42af-a134-3c0a01ed9936",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Frontegg M2M Token",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "{{apiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+						"key": "frontegg-client-id",
+						"value": "cillum esse Duis id"
+					},
+					{
+						"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+						"key": "frontegg-secret-key",
+						"value": "cillum esse Duis id"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/suicauser",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"suicauser"
+					]
+				},
+				"description": "このAPIは利用回数ごとに課金されます。"
+			},
+			"response": [
+				{
+					"id": "ec030304-2c2b-446c-9a74-c9e2048077a2",
+					"name": "200 OK",
+					"originalRequest": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Frontegg M2M Token",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+								"key": "frontegg-client-id",
+								"value": "cillum esse Duis id"
+							},
+							{
+								"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+								"key": "frontegg-secret-key",
+								"value": "cillum esse Duis id"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/suicauser",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suicauser"
+							]
+						},
+						"description": "このAPIは利用回数ごとに課金されます。"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"id": "28253357-905a-4028-91dd-794476b001a4",
+					"name": "404 Not Found",
+					"originalRequest": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Frontegg M2M Token",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+								"key": "frontegg-client-id",
+								"value": "cillum esse Duis id"
+							},
+							{
+								"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+								"key": "frontegg-secret-key",
+								"value": "cillum esse Duis id"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/suicauser",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suicauser"
+							]
+						},
+						"description": "このAPIは利用回数ごとに課金されます。"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "在線位置を取得するAPI",
+			"id": "ab8225c9-38d9-442d-bea6-57dd093a22ba",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Frontegg M2M Token",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "{{apiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+						"key": "frontegg-client-id",
+						"value": "cillum esse Duis id"
+					},
+					{
+						"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+						"key": "frontegg-secret-key",
+						"value": "cillum esse Duis id"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/zaisen",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"zaisen"
+					]
+				},
+				"description": "このAPIは利用回数ごとに課金されます。"
+			},
+			"response": [
+				{
+					"id": "5704877c-cd75-40b5-8ba6-ef15ca552350",
+					"name": "200 OK",
+					"originalRequest": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Frontegg M2M Token",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+								"key": "frontegg-client-id",
+								"value": "cillum esse Duis id"
+							},
+							{
+								"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+								"key": "frontegg-secret-key",
+								"value": "cillum esse Duis id"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/zaisen",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"zaisen"
+							]
+						},
+						"description": "このAPIは利用回数ごとに課金されます。"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"id": "bb4a235f-365a-4d75-95b1-b0e64121815c",
+					"name": "404 Not Found",
+					"originalRequest": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Frontegg M2M Token",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) JRデータマートサービスで発行されたClient IDを設定してください。",
+								"key": "frontegg-client-id",
+								"value": "cillum esse Duis id"
+							},
+							{
+								"description": "(Required) JRデータマートサービスで発行されたSecret Keyキーを設定してください。",
+								"key": "frontegg-secret-key",
+								"value": "cillum esse Duis id"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/zaisen",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"zaisen"
+							]
+						},
+						"description": "このAPIは利用回数ごとに課金されます。"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "a9fdda08-0810-4ca8-a9bb-074737931b69",
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
