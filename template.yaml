@@ -19,7 +19,7 @@ Resources:
   monetizationAPIGateway:
     Type: AWS::Serverless::HttpApi
     Properties:
-      DefinitionUri: swagger.yaml
+      DefinitionUri: postman/schemas/swagger.yaml
 
   authorizerFunction:
     Type: AWS::Serverless::Function
