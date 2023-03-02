@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "771e9e10-b97a-47ed-afc8-65df7903f234",
-		"name": "Documentation",
+		"name": "API Monetization Gateway",
 		"description": "This gateway acts as a front door to your API, allowing us to control access to the underlying services and resources.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_uid": "26046786-771e9e10-b97a-47ed-afc8-65df7903f234"
@@ -60,11 +60,17 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/ekiuser",
+							"raw": "https://p5wnxnw9ha.execute-api.us-west-1.amazonaws.com//ekiuser",
+							"protocol": "https",
 							"host": [
-								"{{baseUrl}}"
+								"p5wnxnw9ha",
+								"execute-api",
+								"us-west-1",
+								"amazonaws",
+								"com"
 							],
 							"path": [
+								"",
 								"ekiuser"
 							]
 						}
@@ -175,11 +181,17 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/kaisatsu",
+							"raw": "https://p5wnxnw9ha.execute-api.us-west-1.amazonaws.com//kaisatsu",
+							"protocol": "https",
 							"host": [
-								"{{baseUrl}}"
+								"p5wnxnw9ha",
+								"execute-api",
+								"us-west-1",
+								"amazonaws",
+								"com"
 							],
 							"path": [
+								"",
 								"kaisatsu"
 							]
 						}
