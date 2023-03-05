@@ -44,7 +44,7 @@ def get_jwt_token(frontegg_client_id, frontegg_secret_key):
     with urllib.request.urlopen(req) as res:
         body = json.loads(res.read())
         FRONTEGG_ACCESS_TOKEN = body['accessToken']
-        FRONTEGG_ACCESS_TOKEN_EXP = int(time.time()) + int(body['expiresIn'])
+        FRONTEGG_ACCESS_TOKEN_EXP = int(time.time()) + 60
         return FRONTEGG_ACCESS_TOKEN
 
 route_dict = {
